@@ -1,0 +1,87 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #FD8D00;
+}
+
+.body > * {
+    box-sizing: border-box;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px;
+    padding: 20px;
+}
+
+.userCard {
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-evenly;
+    margin: 20px;
+
+}
+
+.userAvatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    object-fit: cover;
+
+}
+
+.userAvatar > img {
+    width: 100px;
+    height: 100px;
+}
+
+.fullName {
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+.description {
+    font-size: 14px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: normal;
+
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.socialNetworksList {
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-evenly;
+}
+
+.socialNetwork {
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    object-fit: cover;
+    align-items: center;
+}
+
+.socialNetwork > img {
+    width: 20px;
+    height: 20px;
+}
