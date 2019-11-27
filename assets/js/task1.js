@@ -118,17 +118,38 @@ users.forEach(
 function createUserListElement(user) {
     const userContainerElement = document.createElement("div");
     userContainerElement.classList.add("userCard");
+    userContainerElement.setAttribute("id", `${user.id}`);
+    const userRemoveElement = createCloseButton(user);
     const userImageElement = createUserImageElement(user);
     const userFullName = createUserFullName(user);
     const userDescription = createUserDescription(user);
     const userSocialNetworks = createUserSocialNetworks(user);
 
+    userContainerElement.append(userRemoveElement);
     userContainerElement.append(userImageElement);
     userContainerElement.append(userFullName);
     userContainerElement.append(userDescription);
     userContainerElement.append(userSocialNetworks);
 
     return userContainerElement;
+
+}
+
+function createCloseButton(user) {
+    const closeButtonContainer = document.createElement("div");
+    closeButtonContainer.classList.add("closeButton");
+    const closeImage = document.createElement("img");
+    closeImage.setAttribute("src", "assets/images/icons/account-remove.png");
+    closeImage.setAttribute("alt", "DELETE");
+    closeButtonContainer.append(closeImage);
+
+    closeButtonContainer.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const userListItemElement = document.getElementById(user.id);
+        userListItemElement.remove();
+    });
+
+    return closeButtonContainer;
 
 }
 
