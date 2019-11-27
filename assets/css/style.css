@@ -8,7 +8,7 @@ body {
     box-sizing: border-box;
 }
 
-.cardContainer {
+#userCardContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -73,15 +73,16 @@ body {
     justify-content: space-evenly;
 }
 
-.socialNetwork {
+.socialNetworksList > a {
     width: 25px;
     height: 25px;
     overflow: hidden;
     object-fit: cover;
     align-items: center;
+    margin: 0 5px;
 }
 
-.socialNetwork > img {
+.socialNetworksList > a > img {
     width: 20px;
     height: 20px;
 }
