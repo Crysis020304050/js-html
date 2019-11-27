@@ -38,7 +38,7 @@ const users = [
         id: 3,
         name: "Name3",
         surname: "Surname3",
-        avatar: "https://cache.kwork.ru/pics/t3/00/207103-3.jpg",
+        avatar: "",
         description: "dlsadlfp apsl[d; fd<ze [;g[ g<tgzy plplp lplf k<jnzkxnk p;h[j[ osidiui hpfgohpo isaudi ff",
         socialNetworkList: [
             {type : SOCIAL_NETWORKS.FACEBOOK, href: "#"},
@@ -157,7 +157,8 @@ function createUserImageElement(user) {
     const userImageContainerElement = document.createElement("div");
     userImageContainerElement.classList.add("userAvatar");
     const userImage = document.createElement("img");
-    userImage.setAttribute("src", `${user.avatar}`);
+    /*userImage.setAttribute("src", `${user.avatar}`);*/
+    userImage.setAttribute("src", user.avatar? user.avatar: "assets/images/anonim.png");
     userImage.setAttribute("alt", "user avatar")
     userImageContainerElement.append(userImage);
 
