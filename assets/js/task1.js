@@ -146,7 +146,9 @@ function createCloseButton(user) {
     closeButtonContainer.addEventListener('click', (event) => {
         event.stopPropagation();
         const userListItemElement = document.getElementById(user.id);
-        userListItemElement.remove();
+        userListItemElement.classList.add("deletingUserCard");
+        setTimeout( () => {userListItemElement.remove();}, 200 );
+        /*userListItemElement.remove();*/
     });
 
     return closeButtonContainer;

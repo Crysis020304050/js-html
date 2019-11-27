@@ -30,7 +30,12 @@ body {
     padding: 10px;
     justify-content: space-around;
     margin: 20px;
+    transition-property: width;
 
+}
+
+.deletingUserCard {
+    width: 300px;
 }
 
 .closeButton {
