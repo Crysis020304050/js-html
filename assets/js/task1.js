@@ -107,14 +107,11 @@ const users = [
 
 const userListElement = document.getElementById("userCardContainer");
 
-
 users.forEach(
     (user) => {
         userListElement.append(createUserListElement(user));
     }
 );
-
-
 
 
 
